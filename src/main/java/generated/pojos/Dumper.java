@@ -26,7 +26,7 @@ public class Dumper {
 
 
   public static void writeFunction(int i) throws IOException {
-    bufferedWriter.write("public static Pojo constructor(");
+    bufferedWriter.write("public static Pojo.Pojo constructor(");
     for (int j = 1; j < i - 1; j++){
       bufferedWriter.write("String fieldName" + j + ",");
       bufferedWriter.write(" Object value" + j + ", ");
@@ -36,7 +36,7 @@ public class Dumper {
 
 
     bufferedWriter.write("){\n");
-    bufferedWriter.write("  Pojo ret = new Pojo();\n");
+    bufferedWriter.write("  Pojo.Pojo ret = new Pojo.Pojo();\n");
     bufferedWriter.write("  Map<String, Object> objects = new HashMap<>();\n");
 
     for (int j = 1; j < i; j++){

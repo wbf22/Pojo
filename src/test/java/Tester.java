@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import Pojo.Pojo;
+import Pojo.PojoMaker;
 import org.junit.jupiter.api.Test;
 
 public class Tester {
@@ -30,7 +31,6 @@ public class Tester {
 
   @Test
   public void testEachType(){
-    PojoMaker pojoMaker = new PojoMaker();
     Pojo pojo = new Pojo("var", String.class);
     pojo.set("b", true);
     pojo.set("c", 'b');
@@ -42,7 +42,7 @@ public class Tester {
     pojo.set("d", 2d);
     pojo.set("s", "hello");
 
-    System.out.println(pojo.toString());
+    System.out.println(pojo);
 
   }
 
@@ -64,7 +64,7 @@ public class Tester {
   }
 
   @Test
-  public void typicalUseTest3() throws IOException {
+  public void typicalUseTest3(){
     Pojo student1 = new Pojo("fullName", "Bradly Davis", "age", 1, "grade", 1, "ageInMilliseconds", 10000000);
     Pojo student2 = new Pojo("fullName", "John Johnson", "age", 3, "grade", 1, "ageInMilliseconds", 30000000);
     Pojo student3 = new Pojo("fullName", "Sam Kelper", "age", 2, "grade", 1, "ageInMilliseconds", 20000000);

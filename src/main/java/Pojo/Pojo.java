@@ -1,3 +1,5 @@
+package Pojo;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -924,7 +926,7 @@ public class Pojo {
   public String toString() {
     StringBuilder stringBuilder = new StringBuilder();
     stringBuilder.append("{\n");
-    for (Map.Entry<String, Object> objectEntry : memberVariables.entrySet()) stringBuilder.append("  " + objectEntry.getKey() + "=" + objectEntry.getValue().toString() + "\n");
+    for (Map.Entry<String, Object> objectEntry : memberVariables.entrySet()) stringBuilder.append("  " + objectEntry.getKey() + " = " + objectEntry.getValue().toString() + "\n");
     stringBuilder.append('}');
 
     return stringBuilder.toString();
@@ -944,7 +946,7 @@ public class Pojo {
 
   public void build(String className, boolean generateConstructor) throws IOException {
     PojoMaker pojoMaker = new PojoMaker();
-    pojoMaker.buildPojo(className, this, "src/main/java/generated/pojos", generateConstructor);
+    pojoMaker.buildPojo(className, this, "src/main/java", generateConstructor);
   }
 
   public void build(String className, String fileDestinationPackage, boolean generateConstructor) throws IOException {

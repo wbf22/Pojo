@@ -29,63 +29,7 @@ public class PojoMaker {
     stringBuilder.append("\n");
 
     //fields
-    Set<Map.Entry<String, Boolean>> setFieldsBool = pojo.getBools().entrySet();
-    for (Map.Entry<String, Boolean> field : setFieldsBool){
-      stringBuilder.append("  private boolean ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Character>> setFieldsChar = pojo.getChars().entrySet();
-    for (Map.Entry<String, Character> field : setFieldsChar){
-      stringBuilder.append("  private char ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Byte>> setFieldsByte = pojo.getBytes().entrySet();
-    for (Map.Entry<String, Byte> field : setFieldsByte){
-      stringBuilder.append("  private byte ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Short>> setFieldsShort = pojo.getShorts().entrySet();
-    for (Map.Entry<String, Short> field : setFieldsShort){
-      stringBuilder.append("  private short ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Integer>> setFieldsInts = pojo.getInts().entrySet();
-    for (Map.Entry<String, Integer> field : setFieldsInts){
-      stringBuilder.append("  private int ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Long>> setFieldsLongs = pojo.getLongs().entrySet();
-    for (Map.Entry<String, Long> field : setFieldsLongs){
-      stringBuilder.append("  private long ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Float>> setFieldsFloats = pojo.getFloats().entrySet();
-    for (Map.Entry<String, Float> field : setFieldsFloats){
-      stringBuilder.append("  private float ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Double>> setFieldsDoubles = pojo.getDoubles().entrySet();
-    for (Map.Entry<String, Double> field : setFieldsDoubles){
-      stringBuilder.append("  private double ");
-      stringBuilder.append(field.getKey());
-      stringBuilder.append(";\n");
-    }
-
-    Set<Map.Entry<String, Object>> setFieldsObjects = pojo.getObjects().entrySet();
+    Set<Map.Entry<String, Object>> setFieldsObjects = pojo.getMemberVariables().entrySet();
     for (Map.Entry<String, Object> field : setFieldsObjects){
       stringBuilder.append("  private ");
       stringBuilder.append(field.getValue().getClass().getName());
@@ -108,38 +52,6 @@ public class PojoMaker {
     stringBuilder.append("\n");
 
     //getter setters
-    for (Map.Entry<String, Boolean> field : setFieldsBool){
-      stringBuilder.append(generateGetterSetter(field.getKey(), boolean.class.getName()));
-    }
-
-    for (Map.Entry<String, Character> field : setFieldsChar){
-      stringBuilder.append(generateGetterSetter(field.getKey(), char.class.getName()));
-    }
-
-    for (Map.Entry<String, Byte> field : setFieldsByte){
-      stringBuilder.append(generateGetterSetter(field.getKey(), byte.class.getName()));
-    }
-
-    for (Map.Entry<String, Short> field : setFieldsShort){
-      stringBuilder.append(generateGetterSetter(field.getKey(), short.class.getName()));
-    }
-
-    for (Map.Entry<String, Integer> field : setFieldsInts){
-      stringBuilder.append(generateGetterSetter(field.getKey(), int.class.getName()));
-    }
-
-    for (Map.Entry<String, Long> field : setFieldsLongs){
-      stringBuilder.append(generateGetterSetter(field.getKey(), long.class.getName()));
-    }
-
-    for (Map.Entry<String, Float> field : setFieldsFloats){
-      stringBuilder.append(generateGetterSetter(field.getKey(), float.class.getName()));
-    }
-
-    for (Map.Entry<String, Double> field : setFieldsDoubles){
-      stringBuilder.append(generateGetterSetter(field.getKey(), double.class.getName()));
-    }
-
     for (Map.Entry<String, Object> field : setFieldsObjects){
       stringBuilder.append(generateGetterSetter(field.getKey(), field.getValue().getClass().getName()));
     }
@@ -217,6 +129,8 @@ public class PojoMaker {
   public Pojo jsonToPojo(String json){
     return null;
   }
+
+
 
 
 

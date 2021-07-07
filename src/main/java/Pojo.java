@@ -6,16 +6,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Pojo {
-  private Map<String, Boolean> bools = new HashMap<>();
-  private Map<String, Character> chars = new HashMap<>();
-  private Map<String, Byte> bytes = new HashMap<>();
-  private Map<String, Short> shorts = new HashMap<>();
-  private Map<String, Integer> ints = new HashMap<>();
-  private Map<String, Long> longs = new HashMap<>();
-  private Map<String, Float> floats = new HashMap<>();
-  private Map<String, Double> doubles = new HashMap<>();
-  private Map<String, Object> objects = new HashMap<>();
+  private Map<String, Object> memberVariables = new HashMap<>();
   private static ObjectMapper objectMapper = new ObjectMapper();
+
+  public Pojo(){};
 
   public Pojo(String fieldName, Class type){
     if (type == boolean.class) set(fieldName, false);
@@ -557,82 +551,380 @@ public class Pojo {
     }
   }
 
-  public void constructor(String fieldName, Object value, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4){
 
+  public  Pojo (String fieldName1, Object value1){
+    memberVariables.put(fieldName1, value1);
   }
 
-  public Object get(String name){
-    Boolean boolVal = bools.get(name);
-    Character charVal = chars.get(name);
-    Byte byteVal = bytes.get(name);
-    Short shortVal = shorts.get(name);
-    Integer intVal = ints.get(name);
-    Long longVal = longs.get(name);
-    Float floatVal = floats.get(name);
-    Double doubleVal = doubles.get(name);
-    Object objectVal = objects.get(name);
-    if (boolVal != null) return boolVal.booleanValue();
-    if (charVal != null) return charVal.charValue();
-    if (byteVal != null) return byteVal.byteValue();
-    if (shortVal != null) return shortVal.shortValue();
-    if (intVal != null) return intVal.intValue();
-    if (longVal != null) return longVal.longValue();
-    if (floatVal != null) return floatVal.floatValue();
-    if (doubleVal != null) return doubleVal.doubleValue();
-    if (objectVal != null) return objectVal;
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    
+  }
 
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17, String fieldName18, Object value18){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    memberVariables.put(fieldName18, value18);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17, String fieldName18, Object value18, String fieldName19, Object value19){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    memberVariables.put(fieldName18, value18);
+    memberVariables.put(fieldName19, value19);
+    
+  }
+
+  public  Pojo (String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17, String fieldName18, Object value18, String fieldName19, Object value19, String fieldName20, Object value20){
+    
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    memberVariables.put(fieldName18, value18);
+    memberVariables.put(fieldName19, value19);
+    memberVariables.put(fieldName20, value20);
+    
+  }
+
+
+
+  public Object get(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null) return objectVal;
     return null;
   }
 
-  public void set(String name, boolean val){
-    bools.put(name, val);
+  public byte getByte(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Byte.class) return (byte) objectVal;
+    return 0;
   }
 
-  public void set(String name, char val){
-    chars.put(name, val);
+  public short getShort(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Short.class) return (short) objectVal;
+    return 0;
   }
 
-  public void set(String name, byte val){
-    bytes.put(name, val);
+  public int getInt(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Integer.class) return (int) objectVal;
+    return 0;
   }
 
-  public void set(String name, short val){
-    shorts.put(name, val);
+  public long getLong(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Long.class) return (long) objectVal;
+    return 0;
   }
 
-  public void set(String name, int val){
-    ints.put(name, val);
+  public float getFloat(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Float.class) return (float) objectVal;
+    return 0;
   }
 
-  public void set(String name, long val){
-    longs.put(name, val);
+  public double getDouble(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Double.class) return (double) objectVal;
+    return 0;
   }
 
-  public void set(String name, float val){
-    floats.put(name, val);
+  public char getChar(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Character.class) return (char) objectVal;
+    return '\u0000';
   }
 
-  public void set(String name, double val){
-    doubles.put(name, val);
+  public boolean getBoolean(String name){
+    Object objectVal = memberVariables.get(name);
+    if (objectVal != null && objectVal.getClass() == Boolean.class) return (boolean) objectVal;
+    return false;
   }
 
   public void set(String name, Object val){
-    objects.put(name, val);
+    memberVariables.put(name, val);
   }
 
   @Override
   public String toString() {
     StringBuilder stringBuilder = new StringBuilder();
     stringBuilder.append("{\n");
-    for (Map.Entry<String, Boolean> booleanEntry : bools.entrySet()) stringBuilder.append("  " + booleanEntry.getKey() + "=" + booleanEntry.getValue() + "\n");
-    for (Map.Entry<String, Character> characterEntry : chars.entrySet()) stringBuilder.append("  " + characterEntry.getKey() + "=" + characterEntry.getValue() + "\n");
-    for (Map.Entry<String, Byte> byteEntry : bytes.entrySet()) stringBuilder.append("  " + byteEntry.getKey() + "=" + byteEntry.getValue() + "\n");
-    for (Map.Entry<String, Short> shortEntry : shorts.entrySet()) stringBuilder.append("  " + shortEntry.getKey() + "=" + shortEntry.getValue() + "\n");
-    for (Map.Entry<String, Integer> integerEntry : ints.entrySet()) stringBuilder.append("  " + integerEntry.getKey() + "=" + integerEntry.getValue() + "\n");
-    for (Map.Entry<String, Long> longEntry : longs.entrySet()) stringBuilder.append("  " + longEntry.getKey() + "=" + longEntry.getValue() + "\n");
-    for (Map.Entry<String, Float> floatEntry : floats.entrySet()) stringBuilder.append("  " + floatEntry.getKey() + "=" + floatEntry.getValue() + "\n");
-    for (Map.Entry<String, Double> doubleEntry : doubles.entrySet()) stringBuilder.append("  " + doubleEntry.getKey() + "=" + doubleEntry.getValue() + "\n");
-    for (Map.Entry<String, Object> objectEntry : objects.entrySet()) stringBuilder.append("  " + objectEntry.getKey() + "=" + objectEntry.getValue().toString() + "\n");
+    for (Map.Entry<String, Object> objectEntry : memberVariables.entrySet()) stringBuilder.append("  " + objectEntry.getKey() + "=" + objectEntry.getValue().toString() + "\n");
     stringBuilder.append('}');
 
     return stringBuilder.toString();
@@ -661,75 +953,12 @@ public class Pojo {
   }
 
   //for mapping to json
-  public Map<String, Boolean> getBools() {
-    return bools;
+  public Map<String, Object> getMemberVariables() {
+    return memberVariables;
   }
 
-  public void setBools(Map<String, Boolean> bools) {
-    this.bools = bools;
+  public void setMemberVariables(Map<String, Object> memberVariables) {
+    this.memberVariables = memberVariables;
   }
 
-  public Map<String, Character> getChars() {
-    return chars;
-  }
-
-  public void setChars(Map<String, Character> chars) {
-    this.chars = chars;
-  }
-
-  public Map<String, Byte> getBytes() {
-    return bytes;
-  }
-
-  public void setBytes(Map<String, Byte> bytes) {
-    this.bytes = bytes;
-  }
-
-  public Map<String, Short> getShorts() {
-    return shorts;
-  }
-
-  public void setShorts(Map<String, Short> shorts) {
-    this.shorts = shorts;
-  }
-
-  public Map<String, Integer> getInts() {
-    return ints;
-  }
-
-  public void setInts(Map<String, Integer> ints) {
-    this.ints = ints;
-  }
-
-  public Map<String, Long> getLongs() {
-    return longs;
-  }
-
-  public void setLongs(Map<String, Long> longs) {
-    this.longs = longs;
-  }
-
-  public Map<String, Float> getFloats() {
-    return floats;
-  }
-
-  public void setFloats(Map<String, Float> floats) {
-    this.floats = floats;
-  }
-
-  public Map<String, Double> getDoubles() {
-    return doubles;
-  }
-
-  public void setDoubles(Map<String, Double> doubles) {
-    this.doubles = doubles;
-  }
-
-  public Map<String, Object> getObjects() {
-    return objects;
-  }
-
-  public void setObjects(Map<String, Object> objects) {
-    this.objects = objects;
-  }
 }

@@ -2,34 +2,34 @@ package generated.pojos;
 
 public class Student {
 
-  private int grade;
-  private int age;
-  private long ageInMilliseconds;
+  private java.lang.Integer grade;
+  private java.lang.Integer age;
+  private java.lang.Long ageInMilliseconds;
 
 
   public Student() {}
 
-  public int getGrade() {
+  public java.lang.Integer getGrade() {
     return grade;
   }
 
-  public void setGrade(int grade) {
+  public void setGrade(java.lang.Integer grade) {
     this. grade = grade;
   }
 
-  public int getAge() {
+  public java.lang.Integer getAge() {
     return age;
   }
 
-  public void setAge(int age) {
+  public void setAge(java.lang.Integer age) {
     this. age = age;
   }
 
-  public long getAgeInMilliseconds() {
+  public java.lang.Long getAgeInMilliseconds() {
     return ageInMilliseconds;
   }
 
-  public void setAgeInMilliseconds(long ageInMilliseconds) {
+  public void setAgeInMilliseconds(java.lang.Long ageInMilliseconds) {
     this. ageInMilliseconds = ageInMilliseconds;
   }
 

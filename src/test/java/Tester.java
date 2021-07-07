@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;
@@ -54,10 +55,38 @@ public class Tester {
 
   @Test
   public void typicalUseTest2() throws IOException {
-    Pojo student = new Pojo("fullName", String.class, "age", int.class, "grade", int.class, "ageInMilliseconds", long.class);
-    student.
+    Pojo student = new Pojo("fullName", "Bradly Davis", "age", 1, "grade", 1, "ageInMilliseconds", 20000000);
+    System.out.println(student);
+    int age = student.getInt("age");
+    System.out.println("age=" + age);
+    System.out.println(student.toJsonPretty());
 
   }
+
+  @Test
+  public void typicalUseTest3() throws IOException {
+    Pojo student1 = new Pojo("fullName", "Bradly Davis", "age", 1, "grade", 1, "ageInMilliseconds", 10000000);
+    Pojo student2 = new Pojo("fullName", "John Johnson", "age", 3, "grade", 1, "ageInMilliseconds", 30000000);
+    Pojo student3 = new Pojo("fullName", "Sam Kelper", "age", 2, "grade", 1, "ageInMilliseconds", 20000000);
+    Pojo student4 = new Pojo("fullName", "Harry Dungun", "age", 16, "grade", 1, "ageInMilliseconds", 160000000);
+    Pojo student5 = new Pojo("fullName", "Kelsie Davis", "age", 5, "grade", 1, "ageInMilliseconds", 50000000);
+    Pojo student6 = new Pojo("fullName", "Chelsie Monson", "age", 3, "grade", 1, "ageInMilliseconds", 30000000);
+
+    ArrayList<Pojo> students = new ArrayList<>();
+    students.add(student1);
+    students.add(student2);
+    students.add(student3);
+    students.add(student4);
+    students.add(student5);
+    students.add(student6);
+
+    for (Pojo student : students){
+      System.out.println(student.get("fullName"));
+    }
+
+  }
+
+
 
 
 

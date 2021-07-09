@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -539,19 +540,6 @@ public class Pojo {
     }
   }
 
-  public Pojo(Map<String, Class> fields){
-    for (Map.Entry<String, Class> field : fields.entrySet()){
-      if (field.getValue() == boolean.class) set(field.getKey(), false);
-      if (field.getValue() == char.class) set(field.getKey(), '\u0000');
-      if (field.getValue() == byte.class) set(field.getKey(), 0);
-      if (field.getValue() == short.class) set(field.getKey(), 0);
-      if (field.getValue() == int.class) set(field.getKey(), 0);
-      if (field.getValue() == long.class) set(field.getKey(), 0L);
-      if (field.getValue() == float.class) set(field.getKey(), 0.0f);
-      if (field.getValue() == double.class) set(field.getKey(), 0.0d);
-      if (field.getValue() == Object.class) set(field.getKey(), null);
-    }
-  }
 
 
   public  Pojo (String fieldName1, Object value1){
@@ -862,6 +850,19 @@ public class Pojo {
     
   }
 
+  public Pojo (Map<String, Object> memberVariables){
+    for (Map.Entry<String, Object> field : memberVariables.entrySet()){
+      if (field.getValue() == boolean.class) set(field.getKey(), false);
+      if (field.getValue() == char.class) set(field.getKey(), '\u0000');
+      if (field.getValue() == byte.class) set(field.getKey(), 0);
+      if (field.getValue() == short.class) set(field.getKey(), 0);
+      if (field.getValue() == int.class) set(field.getKey(), 0);
+      if (field.getValue() == long.class) set(field.getKey(), 0L);
+      if (field.getValue() == float.class) set(field.getKey(), 0.0f);
+      if (field.getValue() == double.class) set(field.getKey(), 0.0d);
+      if (field.getValue() == Object.class) set(field.getKey(), null);
+    }
+  }
 
 
   public Object get(String name){
@@ -918,15 +919,340 @@ public class Pojo {
     return false;
   }
 
+
   public void set(String name, Object val){
     memberVariables.put(name, val);
   }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17, String fieldName18, Object value18){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    memberVariables.put(fieldName18, value18);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17, String fieldName18, Object value18, String fieldName19, Object value19){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    memberVariables.put(fieldName18, value18);
+    memberVariables.put(fieldName19, value19);
+
+  }
+
+  public void set(String fieldName1, Object value1, String fieldName2, Object value2, String fieldName3, Object value3, String fieldName4, Object value4, String fieldName5, Object value5, String fieldName6, Object value6, String fieldName7, Object value7, String fieldName8, Object value8, String fieldName9, Object value9, String fieldName10, Object value10, String fieldName11, Object value11, String fieldName12, Object value12, String fieldName13, Object value13, String fieldName14, Object value14, String fieldName15, Object value15, String fieldName16, Object value16, String fieldName17, Object value17, String fieldName18, Object value18, String fieldName19, Object value19, String fieldName20, Object value20){
+
+    memberVariables.put(fieldName1, value1);
+    memberVariables.put(fieldName2, value2);
+    memberVariables.put(fieldName3, value3);
+    memberVariables.put(fieldName4, value4);
+    memberVariables.put(fieldName5, value5);
+    memberVariables.put(fieldName6, value6);
+    memberVariables.put(fieldName7, value7);
+    memberVariables.put(fieldName8, value8);
+    memberVariables.put(fieldName9, value9);
+    memberVariables.put(fieldName10, value10);
+    memberVariables.put(fieldName11, value11);
+    memberVariables.put(fieldName12, value12);
+    memberVariables.put(fieldName13, value13);
+    memberVariables.put(fieldName14, value14);
+    memberVariables.put(fieldName15, value15);
+    memberVariables.put(fieldName16, value16);
+    memberVariables.put(fieldName17, value17);
+    memberVariables.put(fieldName18, value18);
+    memberVariables.put(fieldName19, value19);
+    memberVariables.put(fieldName20, value20);
+
+  }
+
+
+  @JsonIgnore
+  public Pojo getBlankOfThisPojo(){
+    Pojo ret = new Pojo();
+
+    for (Map.Entry<String, Object> field : memberVariables.entrySet()){
+      ret.set(field.getKey(), null);
+    }
+    return ret;
+  }
+
 
   @Override
   public String toString() {
     StringBuilder stringBuilder = new StringBuilder();
     stringBuilder.append("{\n");
-    for (Map.Entry<String, Object> objectEntry : memberVariables.entrySet()) stringBuilder.append("  " + objectEntry.getKey() + " = " + objectEntry.getValue().toString() + "\n");
+    for (Map.Entry<String, Object> objectEntry : memberVariables.entrySet()){
+      stringBuilder.append("  " + objectEntry.getKey() + " = ");
+      if (objectEntry.getValue() != null ){
+        stringBuilder.append(objectEntry.getValue().toString() + "\n");
+      }else{
+        stringBuilder.append("null\n");
+      }
+
+    }
     stringBuilder.append('}');
 
     return stringBuilder.toString();

@@ -1,12 +1,13 @@
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import Pojo.Pojo;
 import Pojo.PojoMaker;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Tester {
 
@@ -121,6 +122,126 @@ public class Tester {
     assertEquals(num6, 1.0d);
     assertEquals(num7, 1.0d);
 
+
+  }
+
+  @Test
+  public void varCollectionAdd(){
+    var strings = new var(new ArrayList<String>());
+    strings.add("hi");
+    System.out.println(strings);
+
+    strings = new var(new HashSet<>());
+    strings.add("hi");
+    System.out.println(strings);
+
+    strings = new var(new PriorityQueue<>());
+    strings.add("hi");
+    System.out.println(strings);
+
+    strings = new var(new LinkedList<>());
+    strings.add("hi");
+    System.out.println(strings);
+
+    strings = new var(new Vector<>());
+    strings.add("hi");
+    System.out.println(strings);
+
+    strings = new var(new Stack<>());
+    strings.add("hi");
+    System.out.println(strings);
+
+
+  }
+
+  @Test
+  public void varCollectionAddAll(){
+    List<String> s = new ArrayList<>();
+    s.add("hi");
+    s.add("hello");
+
+    var strings = new var(new ArrayList<String>());
+    strings.addAll(s);
+    System.out.println(strings);
+
+    strings = new var(new HashSet<>());
+    strings.addAll(s);
+    System.out.println(strings);
+
+    strings = new var(new PriorityQueue<>());
+    strings.addAll(s);
+    System.out.println(strings);
+
+    strings = new var(new LinkedList<>());
+    strings.addAll(s);
+    System.out.println(strings);
+
+    strings = new var(new Vector<>());
+    strings.addAll(s);
+    System.out.println(strings);
+
+    strings = new var(new Stack<>());
+    strings.addAll(s);
+    System.out.println(strings);
+
+
+  }
+
+  @Test
+  public void varCollectionVarious(){
+
+    var strings = new var(new ArrayList<String>());
+    strings.add("hi");
+    strings.add("hello");
+
+    assertFalse(strings.contains("fred"));
+
+    assertTrue(strings.containsAll(strings.toArrayListString()));
+
+    assertFalse(strings.isEmpty());
+
+    Iterator<String> iter = strings.iterator();
+    assertNotNull(iter.next());
+    assertNotNull(iter.next());
+    assertFalse(iter.hasNext());
+
+    assertTrue(strings.remove("hi"));
+    strings.add("hi");
+
+    strings.add("rod");
+    strings.add("wed");
+    ArrayList<String> words = new ArrayList<>();
+    words.add("rod");
+    words.add("wed");
+    assertTrue(strings.removeAll(words));
+    assertEquals(strings.size(), 2);
+
+    strings.add("rud");
+    words.add("hi");
+    words.add("hello");
+    strings.retainAll(words);
+    assertEquals(strings.size(), 2);
+
+    Object array[] = strings.toArray();
+    String arrayStr[] = strings.toArray(new String[]{"kij"});
+    assertEquals(array[0], "hello");
+    assertEquals(arrayStr[0], "hello");
+
+    var d = new var(strings.stream().filter(s->((String)s).startsWith("hi")).collect(Collectors.toList()));
+    assertTrue(d.size() == 1);
+
+    var c = new var(strings.parallelStream().filter(s->((String)s).startsWith("he")).collect(Collectors.toList()));
+    assertTrue(c.size() == 1);
+
+    strings.add("bar");
+    strings.removeIf( s -> ((String) s).startsWith("b"));
+    assertTrue(strings.size() == 2);
+
+    strings.forEach(s -> assertTrue(((String)s).contains("h")));
+
+
+    strings.clear();
+    assertEquals(strings.size(), 0);
 
   }
 

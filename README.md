@@ -1,12 +1,15 @@
-# Pojo
+# Pojo and Python var
 
 This libary is free to use. It provides the following:
 
 <br />
 
+# Table of Contents
+1. [Pojo](#Pojo.java)
+2. [var](#var.java)
+3. [Usage](#Usage)
 
-
-### Pojo.java
+## Pojo.java
 - Quick and easy way to create a simple Pojo in one line
 - Quick and easy way to generate class code from that Pojo
 - Function to convert Pojo object quickly to json
@@ -123,3 +126,97 @@ Pojo student = new Pojo("fullName", "Bradly Davis", "age", null, "grade", 1, "ag
 String json = student.toJson();
 Pojo extracted = Pojo.fromJson(json);
 ```
+
+## var.java
+- python var like data type that can be assigned to any object
+- can be a java collection with all standard methods except splitIterator()
+- can perform math on primitive types and BigDecimal
+
+###Examples
+Assign/create a var like this:
+```java
+var myVariable = new var(1.0f);
+```
+Anything can be passed into the var constructor. Supported Data types:
+
+- boolean
+- byte
+- short
+- int
+- double
+- float
+- char
+- BigDecimal
+- Object
+- String
+- Arraylist
+- Set
+- Queue
+- LinkedList
+- Stack
+- Map
+
+Once you've made a var object and you'd like to convert it back to one of these types
+use the corresponding converter functions.
+```java
+  boolean bl = var.toBoolean();
+
+  char ch = var.toChar();
+
+  byte by = var.toByte();
+
+  short sh = var.toShort();
+
+  int in = var.toInt();
+
+  long lon = var.toLong();
+
+  float flo = var.toFloat()
+
+  double dob = var.toDouble()
+  
+  BigDecimal big = var.toBigDecimal()
+
+```
+
+For collections there's a converter for each of the collections for each
+of the types above, so I won't list them all. Here are a few:
+```java
+Arraylist<String> strings = var.toArrayListString();
+
+Set<Integer> ints = var.toSetInt();
+
+Map<String, BigDecimal> nums = var.toMapStringBigDecimal();
+```
+
+The following funcitons are supported for all of the collection types
+
+- add()
+- addAll()
+- clear()
+- contains()
+- containsAll()
+- isEmpty()
+- iterator()
+- remove()
+- removeAll()
+- retainAll()
+- size()
+- toArray() x2
+- stream()
+- parallelStream()
+- removeIf()
+- forEach()
+
+## Usage
+You can download the jar file [here](https://github.com/wbf22/Pojo/tree/master/out/artifacts/PojoMaker_jar)
+
+In intellij you can add a jar file by going to
+File > Project Structure > Libraries > + > Java and then select 
+the jar file you downloaded. (Though you should probably put it somewhere safer then your downloads folder)
+
+
+
+
+
+

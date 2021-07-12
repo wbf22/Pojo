@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="PojoMaker:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/PojoMaker_jar</output-path>
     <root id="archive" name="PojoMaker.jar">
-      <element id="module-output" name="PojoMaker" />
+      <element id="module-output" name="PojoVar" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.12.3/jackson-annotations-2.12.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.12.3/jackson-databind-2.12.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.12.3/jackson-core-2.12.3.jar" path-in-jar="/" />

@@ -27,6 +27,11 @@ public class var {
   }
 
 
+  @Override
+  public String toString() {
+    return value.toString();
+  }
+
   public var add(var num2){
     if (this.type == Character.class){
       return new var((char) value + (char) num2.getValue());

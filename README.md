@@ -2,12 +2,9 @@
 
 This libary is free to use. It provides the following:
 
-<br />
-
-# Table of Contents
-1. [Pojo](#Pojo)
-2. [var](#var)
-3. [Usage](#Usage)
+1. [Pojo](#Pojo) (Tool for making pojos in line or as a class)
+2. [var](#var) (object that behaves a lot like a python var)
+3. [Usage](#Usage) (see here for info using the library)
 
 ## Pojo
 - Quick and easy way to create a simple Pojo in one line
@@ -90,6 +87,8 @@ You can also call build() like this and it will output to "src/main/java" by def
 doctor.build("Doctor", false);
 ```
 The last field which is a boolean will make the generator create the constructor when true.
+
+<br />
 
 If you already have a Pojo object and you'd like to make an empty instance of it call
 getBlankOfThisPojo()
@@ -209,12 +208,17 @@ The following funcitons are supported for all of the collection types
 - forEach()
 
 ## Usage
-You can download the jar file [here](https://github.com/wbf22/Pojo/tree/master/out/artifacts/PojoMaker_jar)
+You can download the jar file [here](https://github.com/wbf22/Pojo/blob/master/out/artifacts/PojoMaker_jar/PojoMaker.jar)
 
 In intellij you can add a jar file by going to
 File > Project Structure > Libraries > + > Java and then select 
 the jar file you downloaded. (Though you should probably put it somewhere safer then your downloads folder)
+Once you've done that you'll be able to use import the Pojo.java and var.java with:
+```java
 
+```
+
+Hopefully I'll be able to add this library to the maven repository but I'm still currently working on that.
 
 
 

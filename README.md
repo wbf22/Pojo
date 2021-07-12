@@ -5,11 +5,11 @@ This libary is free to use. It provides the following:
 <br />
 
 # Table of Contents
-1. [Pojo](#Pojo.java)
-2. [var](#var.java)
+1. [Pojo](#Pojo)
+2. [var](#var)
 3. [Usage](#Usage)
 
-## Pojo.java
+## Pojo
 - Quick and easy way to create a simple Pojo in one line
 - Quick and easy way to generate class code from that Pojo
 - Function to convert Pojo object quickly to json
@@ -127,7 +127,7 @@ String json = student.toJson();
 Pojo extracted = Pojo.fromJson(json);
 ```
 
-## var.java
+## var
 - python var like data type that can be assigned to any object
 - can be a java collection with all standard methods except splitIterator()
 - can perform math on primitive types and BigDecimal
